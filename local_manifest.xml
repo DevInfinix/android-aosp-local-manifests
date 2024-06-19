@@ -10,7 +10,7 @@
   <remote name="abhay4721-github-rmx3461"
            fetch="https://github.com/abhay4721/" />
   <remote name="abhay4721-gitlab-rmx3461"
-           fetch="https://gitlab.com/abhay4721/android_vendor_realme_ice" />
+           fetch="https://gitlab.com/abhay4721/" />
 
   <!-- Device -->
   <project path="device/realme/ice" name="android_device_realme_ice" remote="infinix-github-rmx3461" revision="14-derp-bleeding-edge" />
