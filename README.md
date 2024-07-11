@@ -1,4 +1,4 @@
-![Banner](https://cdn.discordapp.com/attachments/1046741210909380698/1252758250970153031/HOpN4Bai.jpg?ex=6673618a&is=6672100a&hm=92d0eb1865fa7ba8947324361e8c829902c9cf3482104c3f5a5133a2d14c4701&)
+![Banner](https://cdn.discordapp.com/attachments/1046741210909380698/1252755969029574717/SKB6iLmN.jpg?ex=6691092a&is=668fb7aa&hm=93a6ac3904ead4fae59568817c5332bf7c890ace3cd182132ba1ecec52a3c4db&)
 <h1 align="center"><strong>Local Manifests Repository</strong></h1>
 
 This repository keeps track of custom repositories you use alongside the default manifest, streamlining your development workflow.
