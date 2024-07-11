@@ -23,8 +23,8 @@
   <project path="hardware/oplus" name="sx75/android_hardware_oplus" remote="github-rmx3461" revision="lineage-21" />
 
   <!-- Common -->   
-  <project path="device/oneplus/sm8350-common" name="DevInfinix/android_device_oneplus_sm8350-common" remote="github-rmx3461" revision="derp-14" />
-  <project path="vendor/oneplus/sm8350-common" name="abhay4721/vendor_oneplus_sm8350-common" remote="github-rmx3461" revision="1" />
+  <project path="device/oneplus/sm8350-common" name="DevInfinix/android_device_oneplus_sm8350-common" remote="github-rmx3461" revision="14-derp-bleeding-edge" />
+  <project path="vendor/oneplus/sm8350-common" name="abhay4721/vendor_oneplus_sm8350-common" remote="github-rmx3461" revision="14" />
 
   <!-- Oplus Camera -->
   <project path="vendor/oplus/camera" name="pjgowtham/proprietary_vendor_oplus_camera" remote="gitlab-rmx3461" revision="lineage-21" />
