@@ -28,4 +28,11 @@
 
   <!-- Oplus Camera -->
   <project path="vendor/oplus/camera" name="pjgowtham/proprietary_vendor_oplus_camera" remote="gitlab-rmx3461" revision="lineage-21" />
+
+  <!-- Vibrator -->
+  <project path="vendor/qcom/opensource/vibrator" name="DevInfinix/android_vendor_qcom_opensource_vibrator" remote="github-rmx3461" revision="14-derp-bleeding-edge" />
+
+  <!-- Keys -->
+  <project path="vendor/derp/signing/keys" name="DevInfinix/devinfinix-aosp-roms-keys" remote="github-rmx3461" revision="14-derp-bleeding-edge" />
+    
 </manifest>
