@@ -14,27 +14,6 @@ echo "========================================================================"
 echo "DELETED DIRECTORIES"
 echo "========================================================================"
 
-# Clone Derpfest
-sudo apt install git-lfs
-
-echo "========================================================================"
-echo "INSTALLED GIT LFS"
-echo "========================================================================"
-
-git lfs install
-repo init -u https://github.com/DerpFest-AOSP/manifest.git -b 14 --depth=1 --git-lfs
-
-echo "========================================================================"
-echo "CLONED DERPFEST"
-echo "========================================================================"
-
-# Temp Fix
-cd .repo/repo;git pull -r;cd ../..;
-
-echo "========================================================================"
-echo "UPDATED REPO TOOL"
-echo "========================================================================"
-
 # Clone Vibrator
 git clone https://github.com/DevInfinix/android_vendor_qcom_opensource_vibrator -b 14-derp-bleeding-edge vendor/qcom/opensource/vibrator
 
