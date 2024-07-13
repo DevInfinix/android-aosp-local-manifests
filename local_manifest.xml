@@ -27,7 +27,7 @@
   <project path="vendor/oneplus/sm8350-common" name="abhay4721/vendor_oneplus_sm8350-common" remote="github-rmx3461" revision="14" />
 
   <!-- Oplus Camera -->
-  <project path="vendor/oplus/camera" name="pjgowtham/proprietary_vendor_oplus_camera" remote="gitlab-rmx3461" revision="lineage-21" />
+  <project path="vendor/oplus/camera" name="mvimal2607/proprietary_vendor_oplus_camera" remote="gitlab-rmx3461" revision="everest" />
 
   <!-- Vibrator -->
   <!-- project path="vendor/qcom/opensource/vibrator" name="DevInfinix/android_vendor_qcom_opensource_vibrator" remote="github-rmx3461" revision="14-derp-bleeding-edge" / -->
