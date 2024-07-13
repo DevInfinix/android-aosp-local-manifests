@@ -14,7 +14,7 @@ echo "========================================================================"
 echo "DELETED DIRECTORIES"
 echo "========================================================================"
 
-#Clone Derpfest
+# Clone Derpfest
 sudo apt install git-lfs
 
 echo "========================================================================"
@@ -28,15 +28,18 @@ echo "========================================================================"
 echo "CLONED DERPFEST"
 echo "========================================================================"
 
-#Temp Fix
+# Temp Fix
 cd .repo/repo;git pull -r;cd ../..;
 
 echo "========================================================================"
 echo "UPDATED REPO TOOL"
 echo "========================================================================"
 
+# Clone Vibrator
+git clone https://github.com/DevInfinix/android_vendor_qcom_opensource_vibrator -b 14-derp-bleeding-edge vendor/qcom/opensource/vibrator
+
 # Clone local_manifests repository
-git clone https://github.com/DevInfinix/android-aosp-local-manifests --depth 1 -b 14-derp-bleeding-edge .repo/local_manifests   
+git clone https://github.com/DevInfinix/android-aosp-local-manifests --depth 1 -b 14-derp-bleeding-edge .repo/local_manifests
 if [ ! 0 == 0 ]
     then curl -o .repo/local_manifests https://github.com/DevInfinix/android-aosp-local-manifests.git
 fi
