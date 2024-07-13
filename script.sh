@@ -1,20 +1,45 @@
 #!/bin/bash
 
 rm -rf .repo/local_manifests
-rm -rf device/realme/ice
-rm -rf kernel/oplus/RMX3461
-rm -rf vendor/realme/ice
+rm -rf device/realme
+rm -rf kernel/oplus
+rm -rf vendor/realme
 rm -rf hardware/oplus
-rm -rf device/oneplus/sm8350-common
-rm -rf vendor/oneplus/sm8350-common
-rm -rf vendor/oplus/camera  
+rm -rf device/oneplus
+rm -rf vendor/oneplus
+rm -rf vendor/oplus
 rm -rf vendor/qcom/opensource/vibrator
 
 echo "========================================================================"
 echo "DELETED DIRECTORIES"
 echo "========================================================================"
 
-git clone https://github.com/DevInfinix/android-aosp-local-manifests --depth 1 -b 14-derp-bleeding-edge .repo/local_manifests
+#Clone Derpfest
+sudo apt install git-lfs
+
+echo "========================================================================"
+echo "INSTALLED GIT LFS"
+echo "========================================================================"
+
+git lfs install
+repo init -u https://github.com/DerpFest-AOSP/manifest.git -b 14 --depth=1 --git-lfs
+
+echo "========================================================================"
+echo "CLONED DERPFEST"
+echo "========================================================================"
+
+#Temp Fix
+cd .repo/repo;git pull -r;cd ../..;
+
+echo "========================================================================"
+echo "UPDATED REPO TOOL"
+echo "========================================================================"
+
+# Clone local_manifests repository
+git clone https://github.com/DevInfinix/android-aosp-local-manifests --depth 1 -b 14-derp-bleeding-edge .repo/local_manifests   
+if [ ! 0 == 0 ]
+    then curl -o .repo/local_manifests https://github.com/DevInfinix/android-aosp-local-manifests.git
+fi
 
 echo "========================================================================"
 echo "CLONED REPOS"
@@ -22,13 +47,13 @@ echo "========================================================================"
 
 /opt/crave/resync.sh
 
-source build/envsetup.sh
-
 echo "========================================================================"
 echo "BUILDING........."
 echo "========================================================================"
 
+source build/envsetup.sh
 lunch derp_ice-userdebug
+make installclean
 mka bacon
 
 echo "========================================================================"
