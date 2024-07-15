@@ -32,7 +32,21 @@ echo "RESYNCED"
 echo "========================================================================"
 
 # Clone Vibrator
-git clone https://github.com/DevInfinix/android_vendor_qcom_opensource_vibrator -b 14-derp-bleeding-edge vendor/qcom/opensource/vibrator
+
+DIR="vendor/qcom/opensource/vibrator"
+# Check if the directory exists
+if [ -d "$DIR" ]; then
+    echo "Directory $DIR exists. Deleting it..."
+    rm -rf "$DIR"
+    echo "Directory deleted."
+else
+    echo "Directory $DIR does not exist. No need to delete."
+fi
+
+# Clone the repository
+echo "Cloning the repository..."
+git clone https://github.com/DevInfinix/android_vendor_qcom_opensource_vibrator -b 14-derp-bleeding-edge "$DIR"
+echo "Repository cloned."
 
 echo "========================================================================"
 echo "CLONED VIBRATOR"
