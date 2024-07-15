@@ -54,9 +54,9 @@ echo "CLONED VIBRATOR"
 echo "========================================================================"
 
 # Generate Keys: TEMP FIX (I'm NOT ABLE TO SSH INTO THE SERVER RN)
-subject='/C=IN/ST=Maharashtra/L=Mumbai/O=TheSamStudios/OU=BleedingEdgeCustomROMs/CN=DevInfinix/emailAddress=contact.devinfinix@gmail.com';
-for x in releasekey nfc platform shared media networkstack verity otakey testkey sdk_sandbox bluetooth;
-do ./development/tools/make_key vendor/derp/signing/keys/$x "$subject";
+subject='/C=IN/ST=Maharashtra/L=Mumbai/O=TheSamStudios/OU=BleedingEdgeCustomROMs/CN=DevInfinix/emailAddress=contact.devinfinix@gmail.com'
+for x in releasekey nfc platform shared media networkstack verity otakey testkey sdk_sandbox bluetooth
+do ./development/tools/make_key vendor/derp/signing/keys/$x "$subject"
 done
 
 echo "========================================================================"
