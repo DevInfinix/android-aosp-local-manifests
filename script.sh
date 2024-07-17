@@ -1,4 +1,4 @@
-    #!/bin/bash
+#!/bin/bash
 
 rm -rf .repo/local_manifests
 rm -rf device/realme
@@ -58,6 +58,6 @@ echo "========================================================================"
 
 # LUNCH
 source build/envsetup.sh
-lunch derp_ice-userdebug
+lunch derp_ice-eng
 make installclean
 mka bacon
