@@ -33,6 +33,6 @@
   <!-- project path="vendor/qcom/opensource/vibrator" name="DevInfinix/android_vendor_qcom_opensource_vibrator" remote="github-rmx3461" revision="14-derp-bleeding-edge" / -->
 
   <!-- Keys -->
-  <project path="vendor/derp/signing/keys" name="DevInfinix/devinfinix-aosp-roms-keys" remote="github-rmx3461" revision="14-derp-bleeding-edge">
+  <!-- project path="vendor/derp/signing/keys" name="DevInfinix/devinfinix-aosp-roms-keys" remote="github-rmx3461" revision="14-derp-bleeding-edge" / -->
     
 </manifest>

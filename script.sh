@@ -15,6 +15,7 @@ echo "========================================================================"
 echo "DELETED DIRECTORIES"
 echo "========================================================================"
 
+
 # Clone local_manifests repository
 git clone https://github.com/DevInfinix/android-aosp-local-manifests --depth 1 -b 14-derp-bleeding-edge .repo/local_manifests
 if [ ! 0 == 0 ]
@@ -25,36 +26,60 @@ echo "========================================================================"
 echo "CLONED REPOS"
 echo "========================================================================"
 
+
 # Resync
+
 /opt/crave/resynctest.sh
 
 echo "========================================================================"
 echo "RESYNCED"
 echo "========================================================================"
 
+
 # Clone Vibrator
 
-DIR="vendor/qcom/opensource/vibrator"
+DIRVIB="vendor/qcom/opensource/vibrator"
 # Check if the directory exists
-if [ -d "$DIR" ]; then
-    echo "Directory $DIR exists. Deleting it..."
-    rm -rf "$DIR"
+if [ -d "$DIRVIB" ]; then
+    echo "Directory $DIRVIB exists. Deleting it..."
+    rm -rf "$DIRVIB"
     echo "Directory deleted."
 else
-    echo "Directory $DIR does not exist. No need to delete."
+    echo "Directory $DIRVIB does not exist. No need to delete."
 fi
 
 echo "Cloning the repository..."
-git clone https://github.com/DevInfinix/android_vendor_qcom_opensource_vibrator -b 14-derp-bleeding-edge "$DIR"
-echo "Repository cloned."
+git clone https://github.com/DevInfinix/android_vendor_qcom_opensource_vibrator -b 14-derp-bleeding-edge "$DIRVIB"
 
 echo "========================================================================"
 echo "CLONED VIBRATOR"
 echo "========================================================================"
 
+
+# Clone Keys
+
+DIRKEYS="vendor/derp/signing/keys"
+# Check if the directory exists
+if [ -d "$DIRKEYS" ]; then
+    echo "Directory $DIRKEYS exists. Deleting it..."
+    rm -rf "$DIRKEYS"
+    echo "Directory deleted."
+else
+    echo "Directory $DIRKEYS does not exist. No need to delete."
+fi
+
+echo "Cloning the repository..."
+git clone https://github.com/DevInfinix/devinfinix-aosp-roms-keys -b 14-derp-bleeding-edge "$DIRKEYS"
+
+echo "========================================================================"
+echo "CLONED KEYS"
+echo "========================================================================"
+
+
 echo "========================================================================"
 echo "BUILDING........."
 echo "========================================================================"
+
 
 # LUNCH
 source build/envsetup.sh
