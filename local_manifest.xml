@@ -29,6 +29,9 @@
   <!-- Oplus Camera -->
   <project path="vendor/oplus/camera" name="mvimal2607/proprietary_vendor_oplus_camera" remote="gitlab-rmx3461" revision="everest" />
 
+  <!-- ParanoidSense -->
+  <project name="ponces/packages_apps_ParanoidSense" path="packages/apps/ParanoidSense" remote="github-rmx3461" revision="uvite" />
+
   <!-- Vibrator -->
   <!-- project path="vendor/qcom/opensource/vibrator" name="DevInfinix/android_vendor_qcom_opensource_vibrator" remote="github-rmx3461" revision="14-derp-bleeding-edge" / -->
 
