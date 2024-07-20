@@ -31,7 +31,10 @@
 
   <!-- ViMusic -->
   <project path="packages/apps/ViMusic" name="Google-Pixel2-2XL/packages_apps_ViMusic" remote="github-rmx3461" revision="main" />
-  
+
+  <!-- Droid-ify -->
+  <project path="packages/apps/Droid-ify" name="DevInfinix/packages_apps_Droid-ify" remote="github-rmx3461" revision="14-derp-bleeding-edge" />
+
   <!-- Vibrator -->
   <!-- project path="vendor/qcom/opensource/vibrator" name="DevInfinix/android_vendor_qcom_opensource_vibrator" remote="github-rmx3461" revision="14-derp-bleeding-edge" / -->
 
