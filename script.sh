@@ -10,6 +10,8 @@ rm -rf vendor/oneplus
 rm -rf vendor/oplus
 rm -rf vendor/derp/signing/keys
 rm -rf vendor/qcom/opensource/vibrator
+rm -rf packages/apps/ViMusic
+rm -rf packages/apps/Droid-ify
 
 echo "========================================================================"
 echo "DELETED DIRECTORIES"
@@ -49,7 +51,7 @@ else
 fi
 
 echo "Cloning the repository..."
-git clone https://github.com/DevInfinix/android_vendor_qcom_opensource_vibrator -b 14-derp-bleeding-edge "$DIRVIB"
+git clone https://github.com/DevInfinix/android_vendor_qcom_opensource_vibrator --depth 1 -b 14-derp-bleeding-edge "$DIRVIB"
 
 echo "========================================================================"
 echo "CLONED VIBRATOR"
@@ -73,6 +75,16 @@ git clone https://github.com/DevInfinix/devinfinix-aosp-roms-keys -b 14-derp-ble
 
 echo "========================================================================"
 echo "CLONED KEYS"
+echo "========================================================================"
+
+
+# Clone ParanoidSense
+
+rm -rf packages/apps/ParanoidSense
+git clone https://github.com/DerpFest-AOSP/packages_apps_ParanoidSense --depth 1 -b 14 packages/apps/ParanoidSense
+
+echo "========================================================================"
+echo "CLONED ParanoidSense"
 echo "========================================================================"
 
 
