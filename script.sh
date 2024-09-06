@@ -66,5 +66,5 @@ echo "========================================================================"
 
 # RISEUP
 source build/envsetup.sh
-riseup lineage_ice userdebug
+riseup ice userdebug
 rise b
