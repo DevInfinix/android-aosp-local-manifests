@@ -12,8 +12,17 @@ rm -rf vendor/lineage-priv/keys/
 # rm -rf packages/apps/ViMusic
 # rm -rf packages/apps/Droid-ify
 
+
 echo "========================================================================"
 echo "DELETED DIRECTORIES"
+echo "========================================================================"
+
+
+# Repo Init
+repo init -u https://github.com/RisingTechOSS/android -b fourteen --git-lfs --depth=1
+
+echo "========================================================================"
+echo "REPO INITIALIZED"
 echo "========================================================================"
 
 
