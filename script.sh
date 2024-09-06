@@ -51,7 +51,7 @@ fi
 
 echo "Cloning the repository..."
 git clone https://github.com/DevInfinix/devinfinix-aosp-roms-keys -b 14.0 temp-repo
-mv temp-repo/RisingOs-14/* "$DIRKEYS"
+mv temp-repo/DerpFest-14/* "$DIRKEYS"
 rm -rf temp-repo
 
 echo "========================================================================"
