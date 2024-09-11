@@ -11,7 +11,7 @@
            fetch="https://gitlab.com" />
 
   <!-- Device -->
-  <project path="device/realme/ice" name="DevInfinix/android_device_realme_ice" remote="github-rmx3461" revision="14-rising" />
+  <project path="device/realme/ice" name="DevInfinix/android_device_realme_ice" remote="github-rmx3461" revision="14.0-rising" />
 
   <!-- Kernel -->
   <project path="kernel/oplus/RMX3461" name="DevInfinix/android_kernel_oplus_RMX3461" remote="github-rmx3461" revision="14.0" />
