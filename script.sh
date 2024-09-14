@@ -19,7 +19,8 @@ echo "========================================================================"
 
 
 # Repo Init
-repo init -u https://github.com/RisingTechOSS/android -b fourteen --git-lfs --depth=1
+repo init -u https://github.com/LineageOS/android.git -b lineage-21.0 --git-lfs --depth=1
+
 
 echo "========================================================================"
 echo "REPO INITIALIZED"
@@ -27,7 +28,7 @@ echo "========================================================================"
 
 
 # Clone local_manifests repository
-git clone https://github.com/DevInfinix/android-aosp-local-manifests --depth 1 -b 14-rising .repo/local_manifests
+git clone https://github.com/DevInfinix/android-aosp-local-manifests --depth 1 -b 14-los21 .repo/local_manifests
 if [ ! 0 == 0 ]
     then curl -o .repo/local_manifests https://github.com/DevInfinix/android-aosp-local-manifests.git
 fi
