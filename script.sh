@@ -11,6 +11,7 @@ rm -rf vendor/oplus
 rm -rf vendor/lineage-priv/keys/
 rm -rf packages/apps/ViMusic
 rm -rf packages/apps/Droid-ify
+rm -rf packages/apps/Aves
 
 
 echo "========================================================================"
