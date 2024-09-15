@@ -75,7 +75,8 @@ echo "BUILDING........."
 echo "========================================================================"
 
 
-# RISEUP
+# Breakfast
 source build/envsetup.sh
-riseup ice userdebug
-rise b
+breakfast ice userdebug
+make installclean
+mka bacon
