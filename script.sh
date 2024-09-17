@@ -8,7 +8,7 @@ rm -rf hardware/oplus
 rm -rf device/oneplus
 rm -rf vendor/oneplus
 rm -rf vendor/oplus
-rm -rf vendor/lineage-priv/keys/
+rm -rf vendor/evolution-priv/keys/
 rm -rf packages/apps/ViMusic
 rm -rf packages/apps/Droid-ify
 rm -rf packages/apps/Aves
@@ -20,7 +20,7 @@ echo "========================================================================"
 
 
 # Repo Init
-repo init -u https://github.com/RisingTechOSS/android -b fourteen --git-lfs --depth=1
+repo init -u https://github.com/Evolution-X/manifest -b udc --git-lfs --depth=1
 
 echo "========================================================================"
 echo "REPO INITIALIZED"
@@ -28,7 +28,7 @@ echo "========================================================================"
 
 
 # Clone local_manifests repository
-git clone https://github.com/DevInfinix/android-aosp-local-manifests --depth 1 -b 14-rising .repo/local_manifests
+git clone https://github.com/DevInfinix/android-aosp-local-manifests --depth 1 -b 14-evox .repo/local_manifests
 if [ ! 0 == 0 ]
     then curl -o .repo/local_manifests https://github.com/DevInfinix/android-aosp-local-manifests.git
 fi
@@ -49,7 +49,7 @@ echo "========================================================================"
 
 # Clone Keys
 
-DIRKEYS="vendor/lineage-priv/keys/"
+DIRKEYS="vendor/evolution-priv/keys/"
 # Check if the directory exists
 if [ -d "$DIRKEYS" ]; then
     echo "Directory $DIRKEYS exists. Deleting it..."
@@ -62,7 +62,7 @@ fi
 echo "Cloning the repository..."
 git clone https://github.com/DevInfinix/devinfinix-aosp-roms-keys -b 14.0 temp-repo
 mkdir "$DIRKEYS"
-mv temp-repo/RisingOs-14/* "$DIRKEYS"
+mv temp-repo/EvolutionX-14/* "$DIRKEYS"
 rm -rf temp-repo
 
 echo "========================================================================"
@@ -75,7 +75,8 @@ echo "BUILDING........."
 echo "========================================================================"
 
 
-# RISEUP
+# Breakfast
 source build/envsetup.sh
-riseup ice userdebug
-rise b
+breakfast ice userdebug
+make installclean
+mka bacon
