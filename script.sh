@@ -62,7 +62,7 @@ fi
 
 echo "Cloning the repository..."
 git clone https://github.com/DevInfinix/devinfinix-aosp-roms-keys -b 14.0 temp-repo
-mkdir "$DIRKEYS"
+mkdir -p "$DIRKEYS"
 mv temp-repo/EvolutionX-14/* "$DIRKEYS"
 rm -rf temp-repo
 
