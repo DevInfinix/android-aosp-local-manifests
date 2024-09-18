@@ -77,6 +77,6 @@ echo "========================================================================"
 
 # Breakfast
 source build/envsetup.sh
-breakfast ice userdebug
+lunch evolution_ice-ap2a-userdebug
 make installclean
 mka bacon
