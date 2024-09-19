@@ -72,8 +72,8 @@ echo "BUILDING........."
 echo "========================================================================"
 
 
-# Breakfast
+# Lunch
 source build/envsetup.sh
-breakfast ice userdebug
+lunch lineage_ice-userdebug
 make installclean
 mka evolution
