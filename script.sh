@@ -60,7 +60,7 @@ else
 fi
 
 echo "Cloning the repository..."
-git clone https://github.com/DevInfinix/devinfinix-aosp-roms-keys --depth=1 -b 14.0-los21 "$DIRKEYS"
+git clone https://github.com/DevInfinix/devinfinix-aosp-roms-keys --depth=1 -b 14.0-evox "$DIRKEYS"
 
 echo "========================================================================"
 echo "CLONED KEYS"
@@ -74,6 +74,6 @@ echo "========================================================================"
 
 # Breakfast
 source build/envsetup.sh
-lunch evolution_ice-ap2a-userdebug
+breakfast ice userdebug
 make installclean
-mka bacon
+mka evolution
