@@ -30,7 +30,7 @@
   <project path="vendor/oplus/camera" name="contact.devinfinix/proprietary_vendor_oplus_camera" remote="gitlab-rmx3461" revision="lineage-21" />
 
   <!-- Aves Libre (FOSS Gallery) -->
-  <project path="packages/apps/Aves" name="DevInfinix/packages_apps_Aves" remote="github-rmx3461" revision="main" />
+  <!-- project path="packages/apps/Aves" name="DevInfinix/packages_apps_Aves" remote="github-rmx3461" revision="main" /-->
 
   <!-- ViMusic (FOSS Music)-->
   <project path="packages/apps/ViMusic" name="AR-Project-Studio/packages_apps_ViMusic" remote="github-rmx3461" revision="main" />
