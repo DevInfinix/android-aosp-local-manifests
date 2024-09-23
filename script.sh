@@ -8,7 +8,7 @@ rm -rf hardware/oplus
 rm -rf device/oneplus
 rm -rf vendor/oneplus
 rm -rf vendor/oplus
-rm -rf vendor/voltage-priv/keys/
+rm -rf vendor/signing/yaap/keys
 
 
 echo "========================================================================"
@@ -16,8 +16,8 @@ echo "DELETED DIRECTORIES"
 echo "========================================================================"
 
 
-# Repo Init 
-repo init -u https://github.com/VoltageOS/manifest.git -b 14 --git-lfs --depth=1
+# Repo Init
+repo init -u https://github.com/yaap/manifest.git -b fifteen --git-lfs --depth=1
 
 echo "========================================================================"
 echo "REPO INITIALIZED"
@@ -25,7 +25,7 @@ echo "========================================================================"
 
 
 # Clone local_manifests repository
-git clone https://github.com/DevInfinix/android-aosp-local-manifests --depth 1 -b 14-vos .repo/local_manifests
+git clone https://github.com/DevInfinix/android-aosp-local-manifests --depth 1 -b 15-yaap .repo/local_manifests
 if [ ! 0 == 0 ]
     then curl -o .repo/local_manifests https://github.com/DevInfinix/android-aosp-local-manifests.git
 fi
@@ -46,7 +46,7 @@ echo "========================================================================"
 
 # Clone Keys
 
-DIRKEYS="vendor/voltage-priv/keys/"
+DIRKEYS="vendor/signing/yaap/keys/"
 # Check if the directory exists
 if [ -d "$DIRKEYS" ]; then
     echo "Directory $DIRKEYS exists. Deleting it..."
@@ -57,7 +57,7 @@ else
 fi
 
 echo "Cloning the repository..."
-git clone https://github.com/DevInfinix/devinfinix-aosp-roms-keys --depth=1 -b 14.0-voltage "$DIRKEYS"
+git clone https://github.com/DevInfinix/devinfinix-aosp-roms-keys --depth=1 -b 15.0-testing "$DIRKEYS"
 
 echo "========================================================================"
 echo "CLONED KEYS"
@@ -69,7 +69,7 @@ echo "BUILDING........."
 echo "========================================================================"
 
 
-# RISEUP
+# Lunch
 source build/envsetup.sh
-lunch voltage_ice-ap2a-userdebug
-mka bacon
+lunch yaap_ice-userdebug
+m yaap
