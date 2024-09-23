@@ -29,6 +29,9 @@
   <!-- Oplus Camera -->
   <project path="vendor/oplus/camera" name="contact.devinfinix/proprietary_vendor_oplus_camera" remote="gitlab-rmx3461" revision="lineage-21" />
 
+  <!-- Keys -->
+  <project path="vendor/voltage-priv/keys" name="DevInfinix/devinfinix-aosp-roms-keys" remote="github-rmx3461" revision="14.0-voltage" />
+
   <!-- Aves Libre (FOSS Gallery) -->
   <!-- project path="packages/apps/Aves" name="DevInfinix/packages_apps_Aves" remote="github-rmx3461" revision="main" /-->
 
