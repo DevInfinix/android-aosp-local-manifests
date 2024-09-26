@@ -29,6 +29,9 @@
   <!-- Oplus Camera -->
   <project path="vendor/oplus/camera" name="contact.devinfinix/proprietary_vendor_oplus_camera" remote="gitlab-rmx3461" revision="lineage-21" />
 
+  <!-- Azure Clang -->
+  <project path="prebuilts/clang/host/linux-x86/azure-clang" name="Panchajanya1999/azure-clang" remote="gitlab-rmx3461" revision="main" />
+
   <!-- Aves Libre (FOSS Gallery) -->
   <!-- project path="packages/apps/Aves" name="DevInfinix/packages_apps_Aves" remote="github-rmx3461" revision="main" /-->
 
