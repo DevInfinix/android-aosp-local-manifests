@@ -46,7 +46,9 @@ echo "========================================================================"
 
 # Clone Custom Clang
 
-git clone https://gitlab.com/GhostMaster69-dev/cosmic-clang --depth=1 -b master prebuilts/clang/host/linux-x86/clang-cosmic
+CUSTOMCLANG="azure"
+rm -rf "prebuilts/clang/host/linux-x86/clang-${CUSTOMCLANG}"
+git clone https://gitlab.com/Panchajanya1999/azure-clang --depth=1 -b main prebuilts/clang/host/linux-x86/clang-${CUSTOMCLANG}
 
 echo "========================================================================"
 echo "CLONED CUSTOM CLANG"
