@@ -44,6 +44,15 @@ echo "RESYNCED"
 echo "========================================================================"
 
 
+# Clone Custom Clang
+
+git clone https://gitlab.com/GhostMaster69-dev/cosmic-clang --depth=1 -b master prebuilts/clang/host/linux-x86/clang-cosmic
+
+echo "========================================================================"
+echo "CLONED CUSTOM CLANG"
+echo "========================================================================"
+
+
 # Clone Keys
 
 DIRKEYS="vendor/signing/yaap/keys/"
