@@ -79,6 +79,12 @@ echo "========================================================================"
 
 export LD_LIBRARY_PATH=/usr/aarch64-linux-gnu/bin:/$LD_LIBRARY_PATH
 
+# Temp Fix: Copy libgcc libs
+
+sudo mkdir -p /usr/lib/gcc/x86_64-linux-gnu/11
+sudo cp -r /usr/aarch64-linux-gnu/lib/* /usr/lib/gcc/x86_64-linux-gnu/
+sudo cp -r /usr/aarch64-linux-gnu/lib/* /usr/lib/gcc/x86_64-linux-gnu/11
+
 
 echo "========================================================================"
 echo "BUILDING........."
