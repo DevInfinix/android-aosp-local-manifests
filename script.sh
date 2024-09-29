@@ -85,6 +85,10 @@ sudo mkdir -p /usr/lib/gcc/x86_64-linux-gnu/11
 sudo cp -r /usr/aarch64-linux-gnu/lib/* /usr/lib/gcc/x86_64-linux-gnu/
 sudo cp -r /usr/aarch64-linux-gnu/lib/* /usr/lib/gcc/x86_64-linux-gnu/11
 
+# Temp fix: Remove Seedvault
+
+rm -rf external/seedvault
+
 
 echo "========================================================================"
 echo "BUILDING........."
