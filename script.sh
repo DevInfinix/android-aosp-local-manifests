@@ -8,8 +8,6 @@ rm -rf hardware/oplus
 rm -rf device/oneplus
 rm -rf vendor/oneplus
 rm -rf vendor/oplus
-rm -rf vendor/signing/yaap/keys
-
 
 echo "========================================================================"
 echo "DELETED DIRECTORIES"
@@ -57,7 +55,7 @@ echo "========================================================================"
 
 # Clone Keys
 
-DIRKEYS="vendor/signing/yaap/keys/"
+DIRKEYS="vendor/yaap/signing/keys/"
 # Check if the directory exists
 if [ -d "$DIRKEYS" ]; then
     echo "Directory $DIRKEYS exists. Deleting it..."
