@@ -42,6 +42,16 @@ echo "RESYNCED"
 echo "========================================================================"
 
 
+# Upgrade System and install openssl
+
+sudo apt update && sudo apt upgrade -y
+sudo apt install libssl-dev openssl -y
+
+echo "========================================================================"
+echo "SYSTEM UPGRADED"
+echo "========================================================================"
+
+
 # Clone Custom Clang
 
 CUSTOMCLANG="azure"
