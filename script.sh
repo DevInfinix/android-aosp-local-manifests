@@ -52,6 +52,16 @@ echo "SYSTEM UPGRADED"
 echo "========================================================================"
 
 
+# Clone kernel-build-tools patch
+
+rm -rf prebuilts/kernel-build-tools
+git clone --depth 1 --branch android-13.0.0_r0.85 https://android.googlesource.com/kernel/prebuilts/build-tools prebuilts/kernel-build-tools
+
+echo "========================================================================"
+echo "CLONED KERNEL-BUILD-TOOLS (android-13.0.0_r0.85)"
+echo "===================================================== ==================="
+
+
 # Clone Custom Clang
 
 CUSTOMCLANG="azure"
