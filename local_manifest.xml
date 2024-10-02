@@ -29,16 +29,9 @@
   <!-- Oplus Camera -->
   <project path="vendor/oplus/camera" name="contact.devinfinix/proprietary_vendor_oplus_camera" clone_depth="1" remote="gitlab-rmx3461" revision="lineage-21" />
 
-  <!-- Keys -->
-  <!-- project path="vendor/voltage-priv/keys" name="DevInfinix/devinfinix-aosp-roms-keys" remote="github-rmx3461" revision="14.0-voltage" /-->
-
-  <!-- ViMusic (FOSS Music)-->
-  <!-- project path="packages/apps/ViMusic" name="AR-Project-Studio/packages_apps_ViMusic" remote="github-rmx3461" revision="main" / -->
-
   <!-- ViPER4AndroidFX (FOSS Audio Audio Mod)-->
   <project path="packages/apps/ViPER4AndroidFX" name="TogoFire/packages_apps_ViPER4AndroidFX" clone_depth="1" remote="github-rmx3461" revision="v4a" />
 
-  <!-- Droid-ify (FOSS Applications Store)-->
-  <!-- project path="packages/apps/Droid-ify" name="DevInfinix/packages_apps_Droid-ify" remote="github-rmx3461" revision="main" / -->
-
+  <!-- Remove ParanoidSense -->
+  <remove-project name="packages_apps_ParanoidSense" />
 </manifest>

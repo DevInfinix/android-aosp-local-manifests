@@ -44,6 +44,15 @@ echo "RESYNCED"
 echo "========================================================================"
 
 
+# Upgrade System and install openssl
+
+sudo apt update && sudo apt upgrade -y
+
+echo "========================================================================"
+echo "SYSTEM UPGRADED"
+echo "========================================================================"
+
+
 # Clone Keys
 
 DIRKEYS="vendor/voltage-priv/keys/"
@@ -62,6 +71,11 @@ git clone https://github.com/DevInfinix/devinfinix-aosp-roms-keys --depth=1 -b 1
 echo "========================================================================"
 echo "CLONED KEYS"
 echo "========================================================================"
+
+
+# Temp Fix: Nuke ParanoidSense
+
+rm -rf packages/apps/ParanoidSense
 
 
 echo "========================================================================"
