@@ -34,5 +34,8 @@
 
   <!-- ViPER4AndroidFX (FOSS Audio Audio Mod)-->
   <project path="packages/apps/ViPER4AndroidFX" name="TogoFire/packages_apps_ViPER4AndroidFX" clone_depth="1" remote="github-rmx3461" revision="v4a" />
+  
+  <!-- Remove ParanoidSense -->
+  <remove-project name="packages_apps_ParanoidSense" />
 
 </manifest>
