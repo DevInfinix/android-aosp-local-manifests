@@ -9,9 +9,11 @@ rm -rf device/oneplus
 rm -rf vendor/oneplus
 rm -rf vendor/oplus
 rm -rf vendor/lineage-priv/keys/
-rm -rf packages/apps/ViMusic
+rm -rf packages/apps/RevampedFMRadio
 rm -rf packages/apps/Droid-ify
-rm -rf packages/apps/Aves
+rm -rf packages/apps/PixelParts
+rm -rf packages/apps/ViMusic
+rm -rf packages/apps/ViPER4AndroidFX
 
 
 echo "========================================================================"
@@ -44,6 +46,15 @@ echo "========================================================================"
 
 echo "========================================================================"
 echo "RESYNCED"
+echo "========================================================================"
+
+
+# Upgrade System and install openssl
+
+sudo apt update && sudo apt upgrade -y
+
+echo "========================================================================"
+echo "SYSTEM UPGRADED"
 echo "========================================================================"
 
 
