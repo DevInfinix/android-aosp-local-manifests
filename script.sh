@@ -9,13 +9,15 @@ rm -rf device/oneplus
 rm -rf vendor/oneplus
 rm -rf vendor/oplus
 
+
 echo "========================================================================"
 echo "DELETED DIRECTORIES"
 echo "========================================================================"
 
 
 # Repo Init
-repo init -u https://github.com/ProjectBlaze/manifest -b 15 --git-lfs --depth=1
+
+repo init -u https://github.com/DerpFest-AOSP/manifest.git -b 15 --git-lfs --depth=1
 
 echo "========================================================================"
 echo "REPO INITIALIZED"
@@ -23,7 +25,8 @@ echo "========================================================================"
 
 
 # Clone local_manifests repository
-git clone https://github.com/DevInfinix/android-aosp-local-manifests --depth 1 -b 15-blaze .repo/local_manifests
+
+git clone https://github.com/DevInfinix/android-aosp-local-manifests --depth 1 -b 15-derp .repo/local_manifests
 if [ ! 0 == 0 ]
     then curl -o .repo/local_manifests https://github.com/DevInfinix/android-aosp-local-manifests.git
 fi
@@ -45,7 +48,6 @@ echo "========================================================================"
 # Upgrade System and install openssl
 
 sudo apt update && sudo apt upgrade -y
-sudo apt install libssl-dev openssl -y
 
 echo "========================================================================"
 echo "SYSTEM UPGRADED"
@@ -54,9 +56,9 @@ echo "========================================================================"
 
 # Clone Custom Clang
 
-CUSTOMCLANG="azure"
+CUSTOMCLANG="r487747c"
 rm -rf "prebuilts/clang/host/linux-x86/clang-${CUSTOMCLANG}"
-git clone https://gitlab.com/Panchajanya1999/azure-clang --depth=1 -b main prebuilts/clang/host/linux-x86/clang-${CUSTOMCLANG}
+git clone https://gitlab.com/crdroidandroid/android_prebuilts_clang_host_linux-x86_clang-r487747c --depth=1 -b main prebuilts/clang/host/linux-x86/clang-${CUSTOMCLANG}
 
 echo "========================================================================"
 echo "CLONED CUSTOM CLANG"
@@ -65,7 +67,7 @@ echo "========================================================================"
 
 # Clone Keys
 
-DIRKEYS="vendor/blaze/signing/keys/"
+DIRKEYS="vendor/derp/signing/keys/"
 # Check if the directory exists
 if [ -d "$DIRKEYS" ]; then
     echo "Directory $DIRKEYS exists. Deleting it..."
@@ -76,17 +78,16 @@ else
 fi
 
 echo "Cloning the repository..."
-git clone https://github.com/DevInfinix/devinfinix-aosp-roms-keys --depth=1 -b 15.0-blaze "$DIRKEYS"
+git clone https://github.com/DevInfinix/devinfinix-aosp-roms-keys --depth=1 -b 15.0-derp "$DIRKEYS"
 
 echo "========================================================================"
 echo "CLONED KEYS"
 echo "========================================================================"
 
 
-# Fix: Include openssl headers
+# Temp Fix: Nuke ParanoidSense
 
-CFLAGS+=" -I/usr/include/openssl"
-export CFLAGS
+rm -rf packages/apps/ParanoidSense
 
 
 echo "========================================================================"
@@ -95,7 +96,7 @@ echo "========================================================================"
 
 
 # Lunch
-source build/envsetup.sh && \
-lunch blaze_ice-ap3a-userdebug && \
-make installclean ; \
-make bacon
+source build/envsetup.sh
+lunch derp_ice-userdebug
+make installclean
+mka derp
