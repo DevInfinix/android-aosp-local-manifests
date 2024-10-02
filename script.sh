@@ -8,6 +8,11 @@ rm -rf hardware/oplus
 rm -rf device/oneplus
 rm -rf vendor/oneplus
 rm -rf vendor/oplus
+rm -rf packages/apps/RevampedFMRadio
+rm -rf packages/apps/Droid-ify
+rm -rf packages/apps/PixelParts
+rm -rf packages/apps/ViMusic
+rm -rf packages/apps/ViPER4AndroidFX
 
 
 echo "========================================================================"
