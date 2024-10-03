@@ -16,7 +16,8 @@ echo "DELETED DIRECTORIES"
 echo "========================================================================"
 
 
-# Repo Init 
+# Repo Init
+
 repo init -u https://github.com/VoltageOS/manifest.git -b 14 --git-lfs --depth=1
 
 echo "========================================================================"
@@ -25,6 +26,7 @@ echo "========================================================================"
 
 
 # Clone local_manifests repository
+
 git clone https://github.com/DevInfinix/android-aosp-local-manifests --depth 1 -b 14-vos .repo/local_manifests
 if [ ! 0 == 0 ]
     then curl -o .repo/local_manifests https://github.com/DevInfinix/android-aosp-local-manifests.git
@@ -44,7 +46,7 @@ echo "RESYNCED"
 echo "========================================================================"
 
 
-# Upgrade System and install openssl
+# Upgrade System
 
 sudo apt update && sudo apt upgrade -y
 
@@ -73,17 +75,12 @@ echo "CLONED KEYS"
 echo "========================================================================"
 
 
-# Temp Fix: Nuke ParanoidSense
-
-rm -rf packages/apps/ParanoidSense
-
-
 echo "========================================================================"
 echo "BUILDING........."
 echo "========================================================================"
 
 
-# RISEUP
+# LUNCH
 source build/envsetup.sh
 lunch voltage_ice-ap2a-userdebug
 mka bacon
