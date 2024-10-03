@@ -9,6 +9,9 @@ rm -rf device/oneplus
 rm -rf vendor/oneplus
 rm -rf vendor/oplus
 
+# Cleanup to fix SyncErrors raised during branch checkouts
+rm -rf platform/prebuilts
+
 echo "========================================================================"
 echo "DELETED DIRECTORIES"
 echo "========================================================================"
@@ -45,7 +48,6 @@ echo "========================================================================"
 # Upgrade System and install openssl
 
 sudo apt update && sudo apt upgrade -y
-sudo apt install libssl-dev openssl -y
 
 echo "========================================================================"
 echo "SYSTEM UPGRADED"
@@ -83,19 +85,13 @@ echo "CLONED KEYS"
 echo "========================================================================"
 
 
-# Fix: Include openssl headers
-
-CFLAGS+=" -I/usr/include/openssl"
-export CFLAGS
-
-
 echo "========================================================================"
 echo "BUILDING........."
 echo "========================================================================"
 
 
 # Lunch
-source build/envsetup.sh && \
-lunch blaze_ice-ap3a-userdebug && \
-make installclean ; \
+source build/envsetup.sh
+lunch blaze_ice-ap3a-userdebug
+make installclean
 make bacon
