@@ -43,7 +43,4 @@
 
   <!-- PixelParts (Yet Another Pixel Goodies Package)-->
   <project path="packages/apps/PixelParts" name="Evolution-X-Devices/packages_apps_PixelParts" clone-depth="1" remote="github-rmx3461" revision="udc" />
-
-  <!-- Remove ParanoidSense -->
-  <remove-project name="packages_apps_ParanoidSense" />
 </manifest>

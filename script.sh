@@ -15,7 +15,7 @@ rm -rf packages/apps/ViMusic
 rm -rf packages/apps/ViPER4AndroidFX
 
 
-echo    "========================================================================"
+echo "========================================================================"
 echo "DELETED DIRECTORIES"
 echo "========================================================================"
 
@@ -63,7 +63,7 @@ echo "========================================================================"
 
 CUSTOMCLANG="r487747c"
 rm -rf "prebuilts/clang/host/linux-x86/clang-${CUSTOMCLANG}"
-git clone https://gitlab.com/crdroidandroid/android_prebuilts_clang_host_linux-x86_clang-r487747c --depth=1 -b main prebuilts/clang/host/linux-x86/clang-${CUSTOMCLANG}
+git clone "https://gitlab.com/crdroidandroid/android_prebuilts_clang_host_linux-x86_clang-${CUSTOMCLANG}" --depth=1 -b 14.0 "prebuilts/clang/host/linux-x86/clang-${CUSTOMCLANG}"
 
 echo "========================================================================"
 echo "CLONED CUSTOM CLANG"
@@ -88,13 +88,6 @@ git clone https://github.com/DevInfinix/devinfinix-aosp-roms-keys --depth=1 -b 1
 echo "========================================================================"
 echo "CLONED KEYS"
 echo "========================================================================"
-
-
-# Temp Fix: Use Blaze's ParanoidSense
-
-rm -rf packages/apps/ParanoidSense
-git clone https://github.com/ProjectBlaze/packages_apps_ParanoidSense packages/apps/ParanoidSense
-export BUILD_BROKEN_MISSING_REQUIRED_MODULES=true
 
 
 echo "========================================================================"
