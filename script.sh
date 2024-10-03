@@ -10,6 +10,7 @@ rm -rf vendor/oneplus
 rm -rf vendor/oplus
 rm -rf vendor/pixelstar/signing/
 rm -rf packages/apps/PixelParts
+rm -rf platform/prebuilts/clang/host/linux-x86
 
 
 echo "========================================================================"
