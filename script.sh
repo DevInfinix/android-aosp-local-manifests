@@ -15,7 +15,7 @@ rm -rf packages/apps/ViMusic
 rm -rf packages/apps/ViPER4AndroidFX
 
 
-echo "========================================================================"
+echo    "========================================================================"
 echo "DELETED DIRECTORIES"
 echo "========================================================================"
 
@@ -90,9 +90,11 @@ echo "CLONED KEYS"
 echo "========================================================================"
 
 
-# Temp Fix: Nuke ParanoidSense
+# Temp Fix: Use Blaze's ParanoidSense
 
 rm -rf packages/apps/ParanoidSense
+git clone https://github.com/ProjectBlaze/packages_apps_ParanoidSense packages/apps/ParanoidSense
+export BUILD_BROKEN_MISSING_REQUIRED_MODULES=true
 
 
 echo "========================================================================"
