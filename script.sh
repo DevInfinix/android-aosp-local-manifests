@@ -9,7 +9,7 @@ rm -rf device/oneplus
 rm -rf vendor/oneplus
 rm -rf vendor/oplus
 rm -rf vendor/voltage-priv/keys/
-
+rm -rf prebuilts/clang/host/linux-x86
 
 echo "========================================================================"
 echo "DELETED DIRECTORIES"
