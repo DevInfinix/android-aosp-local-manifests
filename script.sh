@@ -14,6 +14,9 @@ rm -rf packages/apps/PixelParts
 rm -rf packages/apps/ViMusic
 rm -rf packages/apps/ViPER4AndroidFX
 
+# Cleanup to fix SyncErrors raised during branch checkouts
+rm -rf platform/prebuilts
+
 
 echo "========================================================================"
 echo "DELETED DIRECTORIES"
