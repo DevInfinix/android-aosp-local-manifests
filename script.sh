@@ -98,8 +98,8 @@ echo "BUILDING........."
 echo "========================================================================"
 
 
-# Lunch
-source build/envsetup.sh && \
-lunch yaap_ice-userdebug && \
-make installclean ; \
+# LUNCH
+source build/envsetup.sh
+lunch yaap_ice-userdebug
+make installclean
 m yaap
