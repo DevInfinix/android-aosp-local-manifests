@@ -9,6 +9,9 @@ rm -rf device/oneplus
 rm -rf vendor/oneplus
 rm -rf vendor/oplus
 
+# Cleanup to fix SyncErrors raised during branch checkouts
+rm -rf platform/prebuilts
+
 echo "========================================================================"
 echo "DELETED DIRECTORIES"
 echo "========================================================================"
