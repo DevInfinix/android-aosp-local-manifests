@@ -31,4 +31,7 @@
 
   <!-- ViPER4AndroidFX (FOSS Audio Audio Mod)-->
   <project path="packages/apps/ViPER4AndroidFX" clone_depth="1" name="TogoFire/packages_apps_ViPER4AndroidFX" remote="github-rmx3461" revision="v4a" />
+  
+  <!-- Keys -->
+  <project path="vendor/yaap/signing/keys" name="DevInfinix/devinfinix-aosp-roms-keys" remote="github-rmx3461" revision="15.0-testing" />
 </manifest>
