@@ -17,7 +17,7 @@ echo "DELETED DIRECTORIES"
 echo "========================================================================"
 
 
-# Upgrade System and install openssl
+# Upgrade System
 
 sudo apt update && sudo apt upgrade -y
 
@@ -27,6 +27,7 @@ echo "========================================================================"
 
 
 # Repo Init
+
 repo init -u https://github.com/yaap/manifest.git -b fifteen --git-lfs --depth=1
 
 echo "========================================================================"
@@ -35,6 +36,7 @@ echo "========================================================================"
 
 
 # Clone local_manifests repository
+
 git clone https://github.com/DevInfinix/android-aosp-local-manifests --depth 1 -b 15-yaap .repo/local_manifests
 if [ ! 0 == 0 ]
     then curl -o .repo/local_manifests https://github.com/DevInfinix/android-aosp-local-manifests.git
@@ -51,17 +53,6 @@ echo "========================================================================"
 
 echo "========================================================================"
 echo "RESYNCED"
-echo "========================================================================"
-
-
-# Clone Custom Clang
-
-CUSTOMCLANG="azure"
-rm -rf "prebuilts/clang/host/linux-x86/clang-${CUSTOMCLANG}"
-git clone https://gitlab.com/Panchajanya1999/azure-clang --depth=1 -b main prebuilts/clang/host/linux-x86/clang-${CUSTOMCLANG}
-
-echo "========================================================================"
-echo "CLONED CUSTOM CLANG"
 echo "========================================================================"
 
 
