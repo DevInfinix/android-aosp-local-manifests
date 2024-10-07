@@ -56,6 +56,17 @@ echo "RESYNCED"
 echo "========================================================================"
 
 
+# Clone Custom Clang
+
+CUSTOMCLANG="r487747c"
+rm -rf "prebuilts/clang/host/linux-x86/clang-${CUSTOMCLANG}"
+git clone "https://gitlab.com/crdroidandroid/android_prebuilts_clang_host_linux-x86_clang-${CUSTOMCLANG}" --depth=1 -b 14.0 "prebuilts/clang/host/linux-x86/clang-${CUSTOMCLANG}"
+
+echo "========================================================================"
+echo "CLONED CUSTOM CLANG"
+echo "========================================================================"
+
+
 # Clone Keys
 
 DIRKEYS="vendor/pixelstar/signing//keys/"
