@@ -10,11 +10,21 @@ rm -rf vendor/oneplus
 rm -rf vendor/oplus
 rm -rf vendor/pixelstar/signing/
 rm -rf packages/apps/PixelParts
-rm -rf platform/prebuilts/clang/host/linux-x86
 
+# Cleanup to fix SyncErrors raised during branch checkouts
+rm -rf platform/prebuilts
 
 echo "========================================================================"
 echo "DELETED DIRECTORIES"
+echo "========================================================================"
+
+
+# Upgrade System and install openssl
+
+sudo apt update && sudo apt upgrade -y
+
+echo "========================================================================"
+echo "SYSTEM UPGRADED"
 echo "========================================================================"
 
 
