@@ -16,6 +16,7 @@ rm -rf packages/apps/ViPER4AndroidFX
 
 # Cleanup to fix SyncErrors raised during branch checkouts
 rm -rf platform/prebuilts
+rm -rf prebuilts/kernel-build-tools
 
 
 echo "========================================================================"
@@ -71,12 +72,6 @@ git clone "https://gitlab.com/crdroidandroid/android_prebuilts_clang_host_linux-
 echo "========================================================================"
 echo "CLONED CUSTOM CLANG"
 echo "========================================================================"
-
-
-# Clone kernel-build-tools (Fix: includes required headers)
-
-rm -rf prebuilts/kernel-build-tools
-git clone --depth=1 https://github.com/PixelExperience/prebuilts_kernel-build-tools -b fourteen prebuilts/kernel-build-tools
 
 
 # Clone Keys
