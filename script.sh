@@ -13,6 +13,8 @@ rm -rf packages/apps/PixelParts
 
 # Cleanup to fix SyncErrors raised during branch checkouts
 rm -rf platform/prebuilts
+rm -rf prebuilts
+
 
 echo "========================================================================"
 echo "DELETED DIRECTORIES"
