@@ -11,6 +11,7 @@ rm -rf vendor/oplus
 
 # Cleanup to fix SyncErrors raised during branch checkouts
 rm -rf platform/prebuilts
+rm -rf prebuilts
 
 echo "========================================================================"
 echo "DELETED DIRECTORIES"
