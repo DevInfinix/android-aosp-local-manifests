@@ -44,3 +44,7 @@
   <!-- PixelParts (Yet Another Pixel Goodies Package)-->
   <project path="packages/apps/PixelParts" name="Evolution-X-Devices/packages_apps_PixelParts" clone-depth="1" remote="github-rmx3461" revision="udc" />
 </manifest>
+
+  <!-- OpenSSL Prebuilts (Temp Fix)-->
+  <project path="prebuilts/openssl" name="LineageOS/android_prebuilts_openssl" clone-depth="1" remote="github-rmx3461" revision="lineage-17.0" />
+</manifest>
