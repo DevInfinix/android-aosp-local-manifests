@@ -14,7 +14,7 @@
   <project path="device/realme/ice" name="DevInfinix/android_device_realme_ice" clone_depth="1" remote="github-rmx3461" revision="14.0-evox" />
 
   <!-- Kernel -->
-  <project path="kernel/oplus/RMX3461" name="DevInfinix/android_kernel_oplus_RMX3461" clone_depth="1" remote="github-rmx3461" revision="14.0" />
+  <project path="kernel/oplus/RMX3461" name="Debarpan102/kernel_oplus_RMX3461_22x" clone_depth="1" remote="github-rmx3461" revision="ksu-234" />
 
   <!-- Vendor -->
   <project path="vendor/realme/ice" name="crdroidandroid/proprietary_vendor_realme_ice" clone_depth="1" remote="gitlab-rmx3461" revision="14.0" />
