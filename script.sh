@@ -14,8 +14,6 @@ rm -rf packages/apps/ViPER4AndroidFX
 rm -rf platform/prebuilts
 rm -rf prebuilts/kernel-build-tools
 rm -rf prebuilts
-rm -rf .repo/projects
-rm -rf .repo/project-objects
 
 
 echo "========================================================================"
