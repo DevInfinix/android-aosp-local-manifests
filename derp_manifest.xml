@@ -14,7 +14,7 @@
   <project path="device/realme/ice" name="DevInfinix/android_device_realme_ice" clone-depth="1" remote="github-rmx3461" revision="15.0-derp" />
 
   <!-- Kernel -->
-  <project path="kernel/oplus/RMX3461" name="DevInfinix/kernel_oplus_RMX3461_22x" clone_depth="1" remote="github-rmx3461" revision="ksu-224" />
+  <project path="kernel/oplus/RMX3461" name="Deparban102/kernel_oplus_RMX3461_22x" clone_depth="1" remote="github-rmx3461" revision="ksu-234" />
 
   <!-- Vendor -->
   <project path="vendor/realme/ice" name="crdroidandroid/proprietary_vendor_realme_ice" clone-depth="1" remote="gitlab-rmx3461" revision="14.0" />
@@ -40,11 +40,4 @@
 
   <!-- Droid-ify (FOSS Applications Store)-->
   <project path="packages/apps/Droid-ify" name="DevInfinix/packages_apps_Droid-ify" clone-depth="1" remote="github-rmx3461" revision="main" />
-
-  <!-- PixelParts (Yet Another Pixel Goodies Package)-->
-  <project path="packages/apps/PixelParts" name="Evolution-X-Devices/packages_apps_PixelParts" clone-depth="1" remote="github-rmx3461" revision="udc" />
-</manifest>
-
-  <!-- OpenSSL Prebuilts (Temp Fix)-->
-  <project path="prebuilts/openssl" name="LineageOS/android_prebuilts_openssl" clone-depth="1" remote="github-rmx3461" revision="lineage-17.0" />
 </manifest>
