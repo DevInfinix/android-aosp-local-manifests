@@ -2,7 +2,7 @@
 <manifest>
     <!--
       * target: rmx3461 (ice)
-      * rom: DerpFest-15
+      * rom: Pixelage-15
     -->
 
   <remote name="github-rmx3461"
@@ -11,7 +11,7 @@
            fetch="https://gitlab.com" />
 
   <!-- Device -->
-  <project path="device/realme/ice" name="DevInfinix/android_device_realme_ice" clone-depth="1" remote="github-rmx3461" revision="15.0-derp" />
+  <project path="device/realme/ice" name="DevInfinix/android_device_realme_ice" clone-depth="1" remote="github-rmx3461" revision="15.0-pixelage" />
 
   <!-- Kernel -->
   <project path="kernel/oplus/RMX3461" name="Deparban102/kernel_oplus_RMX3461_22x" clone_depth="1" remote="github-rmx3461" revision="ksu-234" />
@@ -20,24 +20,15 @@
   <project path="vendor/realme/ice" name="crdroidandroid/proprietary_vendor_realme_ice" clone-depth="1" remote="gitlab-rmx3461" revision="14.0" />
 
   <!-- Hardware -->
-  <project path="hardware/oplus" name="DevInfinix/android_hardware_oplus" clone-depth="1" remote="github-rmx3461" revision="15.0-derp" />
+  <project path="hardware/oplus" name="DevInfinix/android_hardware_oplus" clone-depth="1" remote="github-rmx3461" revision="15.0-pixelage" />
 
   <!-- Common -->
-  <project path="device/oneplus/sm8350-common" name="DevInfinix/android_device_oneplus_sm8350-common" clone-depth="1" remote="github-rmx3461" revision="15.0-derp" />
+  <project path="device/oneplus/sm8350-common" name="DevInfinix/android_device_oneplus_sm8350-common" clone-depth="1" remote="github-rmx3461" revision="15.0-pixelage" />
   <project path="vendor/oneplus/sm8350-common" name="crdroidandroid/proprietary_vendor_oneplus_sm8350-common" clone-depth="1" remote="gitlab-rmx3461" revision="14.0-lunaa" />
 
   <!-- Oplus Camera -->
   <project path="vendor/oplus/camera" name="contact.devinfinix/proprietary_vendor_oplus_camera" clone-depth="1" remote="gitlab-rmx3461" revision="lineage-21" />
 
-  <!-- ViMusic (FOSS Music)-->
-  <project path="packages/apps/ViMusic" name="AR-Project-Studio/packages_apps_ViMusic" remote="github-rmx3461" revision="main" />
-
   <!-- ViPER4AndroidFX (FOSS Audio Mod)-->
   <project path="packages/apps/ViPER4AndroidFX" name="TogoFire/packages_apps_ViPER4AndroidFX" clone-depth="1" remote="github-rmx3461" revision="v4a" />
-
-  <!-- Revamped FM Radio (FOSS Radio)-->
-  <project path="packages/apps/RevampedFMRadio" name="iusmac/RevampedFMRadio" clone-depth="1" remote="github-rmx3461" revision="qcom" />
-
-  <!-- Droid-ify (FOSS Applications Store)-->
-  <project path="packages/apps/Droid-ify" name="DevInfinix/packages_apps_Droid-ify" clone-depth="1" remote="github-rmx3461" revision="main" />
 </manifest>
