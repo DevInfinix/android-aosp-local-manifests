@@ -80,6 +80,12 @@ echo "BUILDING........."
 echo "========================================================================"
 
 
+# Set some environment variables
+export TZ=Asia/Kolkata
+export BUILD_USERNAME=DevInfinix
+export BUILD_HOSTNAME=Garudinix
+
+
 # LUNCH
 source build/envsetup.sh
 lunch voltage_ice-ap2a-userdebug
