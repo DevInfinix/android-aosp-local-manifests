@@ -99,6 +99,12 @@ echo "BUILDING........."
 echo "========================================================================"
 
 
+# Set some environment variables
+export TZ=Asia/Kolkata
+export BUILD_USERNAME=DevInfinix
+export BUILD_HOSTNAME=Garudinix
+
+
 # Lunch
 source build/envsetup.sh
 lunch derp_ice-userdebug
