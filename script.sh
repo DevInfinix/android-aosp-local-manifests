@@ -21,7 +21,7 @@ echo "DELETED DIRECTORIES"
 echo "========================================================================"
 
 
-# Upgrade System and install openssl
+# Upgrade System
 
 sudo apt update && sudo apt upgrade -y
 
@@ -92,6 +92,12 @@ echo "========================================================================"
 echo "========================================================================"
 echo "BUILDING........."
 echo "========================================================================"
+
+
+# Set some environment variables
+export TZ=Asia/Kolkata
+export BUILD_USERNAME=DevInfinix
+export BUILD_HOSTNAME=Garudinix
 
 
 # LUNCH
