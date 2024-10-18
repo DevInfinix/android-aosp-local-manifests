@@ -83,6 +83,12 @@ echo "BUILDING........."
 echo "========================================================================"
 
 
+# Set some environment variables
+export TZ=Asia/Kolkata
+export BUILD_USERNAME=DevInfinix
+export BUILD_HOSTNAME=Garudinix
+
+
 # RISEUP
 source build/envsetup.sh
 riseup ice userdebug
