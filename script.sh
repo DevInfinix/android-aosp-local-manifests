@@ -12,8 +12,8 @@ rm -rf packages/apps/ViPER4AndroidFX
 
 # Cleanup to fix SyncErrors raised during branch checkouts
 rm -rf platform/prebuilts
-rm -rf prebuilts/kernel-build-tools
 rm -rf prebuilts
+rm -rf .repo/projects
 
 
 echo "========================================================================"
