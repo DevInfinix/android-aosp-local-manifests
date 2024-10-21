@@ -8,10 +8,11 @@ rm -rf hardware/oplus
 rm -rf device/oneplus
 rm -rf vendor/oneplus
 rm -rf vendor/oplus
-rm -rf vendor/evolution-priv/keys/
+rm -rf vendor/infinity-priv/keys/
 rm -rf packages/apps/ViMusic
 rm -rf packages/apps/Droid-ify
 rm -rf packages/apps/Aves
+rm -rf packages/apps/RevampedFMRadio
 
 
 echo "========================================================================"
@@ -19,8 +20,17 @@ echo "DELETED DIRECTORIES"
 echo "========================================================================"
 
 
+# Upgrade System
+
+sudo apt update && sudo apt upgrade -y
+
+echo "========================================================================"
+echo "SYSTEM UPGRADED"
+echo "========================================================================"
+
+
 # Repo Init
-repo init -u https://github.com/Evolution-X/manifest -b udc --git-lfs --depth=1
+repo init --depth=1 --no-repo-verify --git-lfs -u https://github.com/ProjectInfinity-X/manifest -b QPR3 -g default,-mips,-darwin,-notdefault
 
 echo "========================================================================"
 echo "REPO INITIALIZED"
@@ -28,7 +38,7 @@ echo "========================================================================"
 
 
 # Clone local_manifests repository
-git clone https://github.com/DevInfinix/android-aosp-local-manifests --depth 1 -b 14-evox .repo/local_manifests
+git clone https://github.com/DevInfinix/android-aosp-local-manifests --depth 1 -b 14-infinity .repo/local_manifests
 if [ ! 0 == 0 ]
     then curl -o .repo/local_manifests https://github.com/DevInfinix/android-aosp-local-manifests.git
 fi
@@ -49,7 +59,7 @@ echo "========================================================================"
 
 # Clone Keys
 
-DIRKEYS="vendor/evolution-priv/keys/"
+DIRKEYS="vendor/infinity-priv/keys"
 # Check if the directory exists
 if [ -d "$DIRKEYS" ]; then
     echo "Directory $DIRKEYS exists. Deleting it..."
@@ -60,7 +70,7 @@ else
 fi
 
 echo "Cloning the repository..."
-git clone https://github.com/DevInfinix/devinfinix-aosp-roms-keys --depth=1 -b 14.0-evox "$DIRKEYS"
+git clone https://github.com/DevInfinix/devinfinix-aosp-roms-keys --depth=1 -b 14.0-infinity "$DIRKEYS"
 
 echo "========================================================================"
 echo "CLONED KEYS"
@@ -80,6 +90,6 @@ export BUILD_HOSTNAME=Garudinix
 
 # Lunch
 source build/envsetup.sh
-lunch lineage_ice-userdebug
+lunch infinity_ice-userdebug
 make installclean
-mka evolution
+mka bacon
