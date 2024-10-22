@@ -27,9 +27,6 @@
     <!-- Oplus Camera -->
     <project path="vendor/oplus/camera" name="contact.devinfinix/proprietary_vendor_oplus_camera" clone_depth="1" remote="gitlab-rmx3461" revision="lineage-21" />
 
-    <!-- ViMusic (FOSS Music)-->
-    <project path="packages/apps/ViMusic" name="AR-Project-Studio/packages_apps_ViMusic" clone_depth="1" remote="github-rmx3461" revision="main" />
-
     <!-- ViPER4AndroidFX (FOSS Audio Audio Mod)-->
     <project path="packages/apps/ViPER4AndroidFX" name="TogoFire/packages_apps_ViPER4AndroidFX" clone_depth="1" remote="github-rmx3461" revision="v4a" />
 
