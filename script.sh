@@ -79,7 +79,8 @@ echo "========================================================================"
 
 # Set LD_LIBRARY_PATH (libgcc_s.so.1 linker)
 
-export LD_LIBRARY_PATH=/usr/aarch64-linux-gnu/bin:/$LD_LIBRARY_PATH
+mkdir -p /usr/bin/../lib/gcc/x86_64-linux-gnu/11
+cp /usr/bin/../lib/gcc/x86_64-linux-gnu/* /usr/bin/../lib/gcc/x86_64-linux-gnu/11/*
 
 
 # Temp fix: Remove Seedvault
