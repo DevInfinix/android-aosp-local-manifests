@@ -109,4 +109,4 @@ export BUILD_HOSTNAME=Garudinix
 source build/envsetup.sh
 lunch derp_ice-userdebug
 make installclean
-mka derp
+m DISABLE_STUB_VALIDATION=true derp
