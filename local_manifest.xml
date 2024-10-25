@@ -25,7 +25,7 @@
     <project path="vendor/oneplus/sm8350-common" name="crdroidandroid/proprietary_vendor_oneplus_sm8350-common" clone_depth="1" remote="gitlab-rmx3461" revision="14.0-lunaa" />
 
     <!-- Oplus Camera -->
-    <project path="vendor/oplus/camera" name="contact.devinfinix/proprietary_vendor_oplus_camera" clone_depth="1" remote="gitlab-rmx3461" revision="lineage-21" />
+    <project path="vendor/oplus/camera" name="sid2322/proprietary_vendor_oplus_camera" clone_depth="1" remote="gitlab-rmx3461" revision="14.0-lunaa" />
 
     <!-- ViPER4AndroidFX (FOSS Audio Audio Mod)-->
     <project path="packages/apps/ViPER4AndroidFX" name="TogoFire/packages_apps_ViPER4AndroidFX" clone_depth="1" remote="github-rmx3461" revision="v4a" />
