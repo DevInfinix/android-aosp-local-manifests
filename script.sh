@@ -22,7 +22,7 @@ echo "========================================================================"
 
 
 # Repo Init
-repo init -u https://github.com/RisingTechOSS/android -b fourteen --git-lfs --depth=1
+repo init -u https://github.com/projecteverest-aosp/manifest -b 15 --git-lfs --depth=1
 
 echo "========================================================================"
 echo "REPO INITIALIZED"
@@ -30,7 +30,7 @@ echo "========================================================================"
 
 
 # Clone local_manifests repository
-git clone https://github.com/DevInfinix/android-aosp-local-manifests --depth 1 -b 14-rising .repo/local_manifests
+git clone https://github.com/DevInfinix/android-aosp-local-manifests --depth 1 -b 14-everest .repo/local_manifests
 if [ ! 0 == 0 ]
     then curl -o .repo/local_manifests https://github.com/DevInfinix/android-aosp-local-manifests.git
 fi
@@ -49,7 +49,7 @@ echo "RESYNCED"
 echo "========================================================================"
 
 
-# Upgrade System and install openssl
+# Upgrade System
 
 sudo apt update && sudo apt upgrade -y
 
@@ -89,7 +89,7 @@ export BUILD_USERNAME=DevInfinix
 export BUILD_HOSTNAME=Garudinix
 
 
-# RISEUP
+# LUNCH
 source build/envsetup.sh
-riseup ice userdebug
-rise b
+lunch everest_ice-ap3a-userdebug
+mka everest

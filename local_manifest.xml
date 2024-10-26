@@ -2,7 +2,7 @@
 <manifest>
     <!--
       * target: rmx3461 (ice)
-      * rom: RisingOs-14
+      * rom: EverestOs-14
     -->
 
   <remote name="github-rmx3461"
@@ -11,10 +11,10 @@
            fetch="https://gitlab.com" />
 
   <!-- Device -->
-  <project path="device/realme/ice" name="DevInfinix/android_device_realme_ice" clone_depth="1" remote="github-rmx3461" revision="14.0-rising" />
+  <project path="device/realme/ice" name="DevInfinix/android_device_realme_ice" clone_depth="1" remote="github-rmx3461" revision="14.0-everest" />
 
   <!-- Kernel -->
-  <project path="kernel/oplus/RMX3461" name="Debarpan102/kernel_oplus_RMX3461_22x" clone_depth="1" remote="github-rmx3461" revision="ksu-224" />
+  <project path="kernel/oplus/RMX3461" name="DevInfinix/android_kernel_oplus_RMX3461" clone_depth="1" remote="github-rmx3461" revision="14.0-headers" />
 
   <!-- Vendor -->
   <project path="vendor/realme/ice" name="crdroidandroid/proprietary_vendor_realme_ice" clone_depth="1" remote="gitlab-rmx3461" revision="14.0" />
@@ -27,7 +27,7 @@
   <project path="vendor/oneplus/sm8350-common" name="crdroidandroid/proprietary_vendor_oneplus_sm8350-common" clone_depth="1" remote="gitlab-rmx3461" revision="14.0-lunaa" />
 
   <!-- Oplus Camera -->
-  <project path="vendor/oplus/camera" name="contact.devinfinix/proprietary_vendor_oplus_camera" clone_depth="1" remote="gitlab-rmx3461" revision="lineage-21" />
+  <project path="vendor/oplus/camera" name="DevInfinix/proprietary_vendor_oplus_camera" clone-depth="1" remote="github-rmx3461" revision="15-ice-flavoured" />
 
   <!-- ViMusic (FOSS Music)-->
   <project path="packages/apps/ViMusic" name="AR-Project-Studio/packages_apps_ViMusic" clone_depth="1" remote="github-rmx3461" revision="main" />
