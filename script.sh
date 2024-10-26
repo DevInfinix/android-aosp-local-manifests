@@ -11,7 +11,6 @@ rm -rf vendor/oplus
 rm -rf vendor/lineage-priv/keys/
 rm -rf packages/apps/RevampedFMRadio
 rm -rf packages/apps/Droid-ify
-rm -rf packages/apps/PixelParts
 rm -rf packages/apps/ViMusic
 rm -rf packages/apps/ViPER4AndroidFX
 
@@ -31,7 +30,7 @@ echo "========================================================================"
 
 
 # Repo Init
-repo init -u https://github.com/projecteverest-aosp/manifest -b 15 --git-lfs --depth=1
+repo init -u https://github.com/halcyonproject/manifest -b 15.0 --git-lfs --depth=1
 
 echo "========================================================================"
 echo "REPO INITIALIZED"
@@ -39,7 +38,7 @@ echo "========================================================================"
 
 
 # Clone local_manifests repository
-git clone https://github.com/DevInfinix/android-aosp-local-manifests --depth 1 -b 14-everest .repo/local_manifests
+git clone https://github.com/DevInfinix/android-aosp-local-manifests --depth 1 -b 15-halcyon .repo/local_manifests
 if [ ! 0 == 0 ]
     then curl -o .repo/local_manifests https://github.com/DevInfinix/android-aosp-local-manifests.git
 fi
@@ -102,5 +101,5 @@ export BUILD_HOSTNAME=Garudinix
 
 # LUNCH
 source build/envsetup.sh
-lunch everest_ice-ap3a-userdebug
-mka everest
+lunch halcyon_ice-ap3a-userdebug
+make carthage
