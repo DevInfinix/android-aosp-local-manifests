@@ -11,7 +11,6 @@ rm -rf vendor/oplus
 rm -rf vendor/lineage-priv/keys/
 rm -rf packages/apps/RevampedFMRadio
 rm -rf packages/apps/Droid-ify
-rm -rf packages/apps/PixelParts
 rm -rf packages/apps/ViMusic
 rm -rf packages/apps/ViPER4AndroidFX
 
@@ -22,7 +21,7 @@ echo "========================================================================"
 
 
 # Repo Init
-repo init -u https://github.com/RisingTechOSS/android -b fourteen --git-lfs --depth=1
+repo init -u https://github.com/crdroidandroid/android.git -b 15.0 --git-lfs --depth=1
 
 echo "========================================================================"
 echo "REPO INITIALIZED"
@@ -30,7 +29,7 @@ echo "========================================================================"
 
 
 # Clone local_manifests repository
-git clone https://github.com/DevInfinix/android-aosp-local-manifests --depth 1 -b 14-rising .repo/local_manifests
+git clone https://github.com/DevInfinix/android-aosp-local-manifests --depth 1 -b 14-crdroid .repo/local_manifests
 if [ ! 0 == 0 ]
     then curl -o .repo/local_manifests https://github.com/DevInfinix/android-aosp-local-manifests.git
 fi
@@ -49,7 +48,7 @@ echo "RESYNCED"
 echo "========================================================================"
 
 
-# Upgrade System and install openssl
+# Upgrade System
 
 sudo apt update && sudo apt upgrade -y
 
@@ -89,7 +88,6 @@ export BUILD_USERNAME=DevInfinix
 export BUILD_HOSTNAME=Garudinix
 
 
-# RISEUP
+# BRUNCH
 source build/envsetup.sh
-riseup ice userdebug
-rise b
+brunch ice
