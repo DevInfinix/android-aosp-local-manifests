@@ -14,7 +14,8 @@ rm -rf packages/apps/Droid-ify
 rm -rf packages/apps/PixelParts
 rm -rf packages/apps/ViMusic
 rm -rf packages/apps/ViPER4AndroidFX
-
+rm -rf vendor/oplus/camera
+rm -rf prebuilts/clang/host/linux-x86/clang-r487747c
 
 echo "========================================================================"
 echo "DELETED DIRECTORIES"
@@ -67,6 +68,12 @@ git clone "https://gitlab.com/crdroidandroid/android_prebuilts_clang_host_linux-
 echo "========================================================================"
 echo "CLONED CUSTOM CLANG"
 echo "========================================================================"
+
+
+# Clone OplusCan (EverestOs ships with its opcam, we don't wanna use it obviously)
+
+rm -rf vendor/oplus/camera
+git clone https://github.com/DevInfinix/proprietary_vendor_oplus_camera -b 15-ice-flavoured vendor/oplus/camera
 
 
 # Clone Keys
