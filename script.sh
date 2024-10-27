@@ -20,8 +20,17 @@ echo "DELETED DIRECTORIES"
 echo "========================================================================"
 
 
+# Upgrade System
+
+sudo apt update && sudo apt upgrade -y
+
+echo "========================================================================"
+echo "SYSTEM UPGRADED"
+echo "========================================================================"
+
+
 # Repo Init
-repo init -u https://github.com/crdroidandroid/android.git -b 15.0 --git-lfs --depth=1
+repo init -u https://github.com/crdroidandroid/android.git -b 14.0 --git-lfs --depth=1
 
 echo "========================================================================"
 echo "REPO INITIALIZED"
@@ -45,15 +54,6 @@ echo "========================================================================"
 
 echo "========================================================================"
 echo "RESYNCED"
-echo "========================================================================"
-
-
-# Upgrade System
-
-sudo apt update && sudo apt upgrade -y
-
-echo "========================================================================"
-echo "SYSTEM UPGRADED"
 echo "========================================================================"
 
 
