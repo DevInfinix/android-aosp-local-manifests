@@ -70,12 +70,6 @@ echo "CLONED CUSTOM CLANG"
 echo "========================================================================"
 
 
-# Clone OplusCan (EverestOs ships with its opcam, we don't wanna use it obviously)
-
-rm -rf vendor/oplus/camera
-git clone https://github.com/DevInfinix/proprietary_vendor_oplus_camera -b 15-ice-flavoured vendor/oplus/camera
-
-
 # Clone Keys
 
 DIRKEYS="vendor/lineage-priv/keys/"
