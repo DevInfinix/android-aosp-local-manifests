@@ -11,7 +11,6 @@ rm -rf vendor/oplus
 rm -rf vendor/lineage-priv/keys/
 rm -rf packages/apps/RevampedFMRadio
 rm -rf packages/apps/Droid-ify
-rm -rf packages/apps/PixelParts
 rm -rf packages/apps/ViMusic
 rm -rf packages/apps/ViPER4AndroidFX
 
@@ -21,8 +20,18 @@ echo "DELETED DIRECTORIES"
 echo "========================================================================"
 
 
+# Upgrade System
+
+sudo apt update && sudo apt upgrade -y
+
+echo "========================================================================"
+echo "SYSTEM UPGRADED"
+echo "========================================================================"
+
+
 # Repo Init
-repo init -u https://github.com/RisingTechOSS/android -b fourteen --git-lfs --depth=1
+
+repo init -u https://github.com/RisingTechOSS/android -b fifteen --git-lfs --depth=1
 
 echo "========================================================================"
 echo "REPO INITIALIZED"
@@ -30,7 +39,8 @@ echo "========================================================================"
 
 
 # Clone local_manifests repository
-git clone https://github.com/DevInfinix/android-aosp-local-manifests --depth 1 -b 14-rising .repo/local_manifests
+
+git clone https://github.com/DevInfinix/android-aosp-local-manifests --depth 1 -b 15-rising .repo/local_manifests
 if [ ! 0 == 0 ]
     then curl -o .repo/local_manifests https://github.com/DevInfinix/android-aosp-local-manifests.git
 fi
@@ -46,15 +56,6 @@ echo "========================================================================"
 
 echo "========================================================================"
 echo "RESYNCED"
-echo "========================================================================"
-
-
-# Upgrade System and install openssl
-
-sudo apt update && sudo apt upgrade -y
-
-echo "========================================================================"
-echo "SYSTEM UPGRADED"
 echo "========================================================================"
 
 
@@ -84,12 +85,14 @@ echo "========================================================================"
 
 
 # Set some environment variables
+
 export TZ=Asia/Kolkata
 export BUILD_USERNAME=DevInfinix
 export BUILD_HOSTNAME=Garudinix
 
 
 # RISEUP
+
 source build/envsetup.sh
 riseup ice userdebug
 rise b
