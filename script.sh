@@ -30,7 +30,7 @@ echo "========================================================================"
 
 
 # Repo Init
-repo init --depth=1 --no-repo-verify --git-lfs -u https://github.com/ProjectInfinity-X/manifest -b QPR3 -g default,-mips,-darwin,-notdefault
+repo init --depth=1 --git-lfs -u https://github.com/ProjectInfinity-X/manifest -b QPR3 -g default,-mips,-darwin,-notdefault
 
 echo "========================================================================"
 echo "REPO INITIALIZED"
