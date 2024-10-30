@@ -31,7 +31,7 @@ echo "========================================================================"
 
 # Repo Init
 
-repo init -u https://github.com/RisingTechOSS/android -b fifteen --git-lfs --depth=1
+repo init -u https://github.com/RisingOS-staging/android -b fifteen --git-lfs --depth=1
 
 echo "========================================================================"
 echo "REPO INITIALIZED"
