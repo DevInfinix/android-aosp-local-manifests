@@ -62,7 +62,7 @@ echo "========================================================================"
 # TEMP: Patch build/soong to allow oplus packages
 
 cd build/soong
-git fetch https://github.com/RisingTechOSS/android_frameworks_base fourteen
+git fetch https://github.com/RisingTechOSS/android_build_soong fourteen
 git cherry-pick 87df93b1ea08c751e2047b3d9e36bda487945e28
 cd ../..
 
