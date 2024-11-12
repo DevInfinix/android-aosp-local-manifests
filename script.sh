@@ -10,6 +10,9 @@ rm -rf vendor/oneplus
 rm -rf vendor/oplus
 rm -rf packages/apps/ViPER4AndroidFX
 
+# Temp
+rm -rf vendor/pixelage
+
 # Cleanup to fix SyncErrors raised during branch checkouts
 rm -rf prebuilts
 
@@ -70,18 +73,22 @@ echo "========================================================================"
 
 # Clone Keys
 
-DIRKEYS="vendor/pixelage-priv/keys/"
+DIRKEYS="vendor/pixelage-priv/keys"
 # Check if the directory exists
 if [ -d "$DIRKEYS" ]; then
     echo "Directory $DIRKEYS exists. Deleting it..."
     rm -rf "$DIRKEYS"
     echo "Directory deleted."
+    echo "Cloning the repository..."
+    git clone https://github.com/DevInfinix/devinfinix-aosp-roms-keys --depth=1 -b 15.0-pixelage tmp-keys
+    cp tmp-keys/* $DIRKEYS
+    rm -rf tmp-keys/Android.bp
 else
     echo "Directory $DIRKEYS does not exist. No need to delete."
+    git clone https://github.com/DevInfinix/devinfinix-aosp-roms-keys --depth=1 -b 15.0-pixelage "$DIRKEYS"
+    echo "Cloned old keys instead!"
 fi
 
-echo "Cloning the repository..."
-git clone https://github.com/DevInfinix/devinfinix-aosp-roms-keys --depth=1 -b 15.0-pixelage "$DIRKEYS"
 
 echo "========================================================================"
 echo "CLONED KEYS"
