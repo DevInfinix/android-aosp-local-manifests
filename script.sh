@@ -11,7 +11,6 @@ rm -rf vendor/oplus
 rm -rf packages/apps/ViPER4AndroidFX
 
 # Cleanup to fix SyncErrors raised during branch checkouts
-rm -rf platform/prebuilts
 rm -rf prebuilts
 
 
@@ -61,12 +60,12 @@ echo "========================================================================"
 
 # Clone Custom Clang
 
-CUSTOMCLANG="r522817"
-rm -rf "prebuilts/clang/host/linux-x86/clang-${CUSTOMCLANG}"
-git clone "https://gitlab.com/crdroidandroid/android_prebuilts_clang_host_linux-x86_clang-${CUSTOMCLANG}" --depth=1 -b 15.0 "prebuilts/clang/host/linux-x86/clang-${CUSTOMCLANG}"
-echo "========================================================================"
-echo "CLONED CUSTOM CLANG"
-echo "========================================================================"
+#CUSTOMCLANG="r522817"
+#rm -rf "prebuilts/clang/host/linux-x86/clang-${CUSTOMCLANG}"
+#git clone "https://gitlab.com/crdroidandroid/android_prebuilts_clang_host_linux-x86_clang-${CUSTOMCLANG}" --depth=1 -b 15.0 "prebuilts/clang/host/linux-x86/clang-${CUSTOMCLANG}"
+#echo "========================================================================"
+#echo "CLONED CUSTOM CLANG"
+#echo "========================================================================"
 
 
 # Clone Keys
@@ -86,6 +85,17 @@ git clone https://github.com/DevInfinix/devinfinix-aosp-roms-keys --depth=1 -b 1
 
 echo "========================================================================"
 echo "CLONED KEYS"
+echo "========================================================================"
+
+
+# TEMP: Attempt to fix llvm errors
+
+cd vendor/pixelage
+git revert e1022e42d5541a75bda94d86a3c49da30401c8b4
+cd ../..
+
+echo "========================================================================"
+echo "REVERTED LLVM COMMIT"
 echo "========================================================================"
 
 
