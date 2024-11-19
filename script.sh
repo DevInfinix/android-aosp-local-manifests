@@ -31,7 +31,7 @@ echo "========================================================================"
 
 # Repo Init
 
-repo init -u https://github.com/RisingOS-staging/android -b fifteen --git-lfs --depth=1
+repo init -u https://github.com/crdroidandroid/android.git -b 15.0 --git-lfs --depth=1
 
 echo "========================================================================"
 echo "REPO INITIALIZED"
@@ -40,7 +40,7 @@ echo "========================================================================"
 
 # Clone local_manifests repository
 
-git clone https://github.com/DevInfinix/android-aosp-local-manifests --depth 1 -b 15-rising .repo/local_manifests
+git clone https://github.com/DevInfinix/android-aosp-local-manifests --depth 1 -b 15-crdroid .repo/local_manifests
 if [ ! 0 == 0 ]
     then curl -o .repo/local_manifests https://github.com/DevInfinix/android-aosp-local-manifests.git
 fi
@@ -57,14 +57,6 @@ echo "========================================================================"
 echo "========================================================================"
 echo "RESYNCED"
 echo "========================================================================"
-
-
-# TEMP: Patch build/soong to allow oplus packages
-
-cd build/soong
-git fetch https://github.com/RisingTechOSS/android_frameworks_base fourteen
-git cherry-pick 87df93b1ea08c751e2047b3d9e36bda487945e28
-cd ../..
 
 
 # Clone Keys
@@ -99,8 +91,7 @@ export BUILD_USERNAME=DevInfinix
 export BUILD_HOSTNAME=Garudinix
 
 
-# RISEUP
+# BRUNCH
 
 source build/envsetup.sh
-riseup ice userdebug
-rise b
+brunch ice
