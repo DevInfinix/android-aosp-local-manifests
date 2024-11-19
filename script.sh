@@ -67,6 +67,13 @@ echo "========================================================================"
 #echo "CLONED CUSTOM CLANG"
 #echo "========================================================================"
 
+rm -rf "prebuilts/clang/host/linux-x86/clang-azure"
+git clone https://gitlab.com/Panchajanya1999/azure-clang --depth=1 -b main "prebuilts/clang/host/linux-x86/clang-azure"
+
+echo "========================================================================"
+echo "CLONED CUSTOM CLANG"
+echo "========================================================================"
+
 
 # Clone Keys [Use default for now]
 
